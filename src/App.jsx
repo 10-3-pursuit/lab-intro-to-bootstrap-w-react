@@ -1,4 +1,5 @@
 import postData from "./data/posts.json";
+import posts from "./data/posts.json"
 
 function App() {
   console.log(postData);
