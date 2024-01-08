@@ -25,23 +25,22 @@ const Nav = () => {
     //     </div>
     // </nav>
     <>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            {/* Home Logo */}
-            <a class="navbar-brand" href="#">Travel <span>Blog</span></a>
-            {/* Navbar Links */}
-            <div className="navbar-nav flex-row">
-            {/* NavBar Links */}
-            <a className="nav-link me-3" href="/about">About</a>
-            <a className="nav-link" href="/popular-posts">Popular Posts</a>
+        <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid">
+                {/* Navbar Links */}
+                <div className="navbar-nav flex-row">
+                    {/* Home Logo */}
+                    <a className="navbar-brand fs-1" href="#">Travel <span className="script-font">Blog</span></a>
+                    <a className="nav-link me-3 ms-3 my-3" href="/about">About</a>
+                    <a className="nav-link my-3" href="/popular-posts">Popular Posts</a>
+                </div>
             </div>
-        </div>
         </nav>
         {/* Quote Section */}
-        <div className="container-fluid  p-4 text-center border-top border-bottom mt-4">
-            <h3>
+        <div className="container-fluid p-4 text-center border-top border-bottom mt-4 bg-body-tertiary">
+            <h2 className="script-font">
             Travel is the only thing you buy that makes you richer...
-            </h3>
+            </h2>
         </div>
     </>
   )

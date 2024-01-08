@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+span{
+  color: gold;
+}
 .script-font {
   font-family: "Great Vibes", cursive;
 }

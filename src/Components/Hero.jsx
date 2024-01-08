@@ -1,7 +1,13 @@
 
+import { useState } from "react"
+import postData from "../data/posts.json"
+import Card from "./Card"
+import PostsByLocationTable from "./PostsByLocationTable"
+
 const Hero = () => {
+  const [allPosts, setAllPosts] = useState(postData)
   return (
-    <div className="container-fluid mt-3" id="hero">
+    <main className="container-fluid mt-3" id="hero">
       {/* Search Form */}
       <div className="row">
         <form className="d-flex" role="search">
@@ -18,7 +24,14 @@ const Hero = () => {
         </form>
       </div>
 
-    </div>
+
+      <section className="mt-3 row">
+      {allPosts.map((post) => (
+          <Card post={post} key={post.id}/>
+        ))}
+      </section>
+
+    </main>
   )
 }
 
