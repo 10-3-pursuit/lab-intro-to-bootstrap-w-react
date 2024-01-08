@@ -24,31 +24,26 @@ const Nav = () => {
     //         </div>
     //     </div>
     // </nav>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-    {/* Home Logo */}
-    <a class="navbar-brand" href="#">Travel <span>Blog</span></a>
-    {/* Navbar Links */}
-    <div className="navbar-nav flex-row">
-          {/* NavBar Links */}
-          <a className="nav-link me-3" href="/about">About</a>
-          <a className="nav-link" href="/popular-posts">Popular Posts</a>
+    <>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            {/* Home Logo */}
+            <a class="navbar-brand" href="#">Travel <span>Blog</span></a>
+            {/* Navbar Links */}
+            <div className="navbar-nav flex-row">
+            {/* NavBar Links */}
+            <a className="nav-link me-3" href="/about">About</a>
+            <a className="nav-link" href="/popular-posts">Popular Posts</a>
+            </div>
         </div>
-        {/* Search Form */}
-        <form className="d-flex" role="search">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
-    </div>
-    </nav>
+        </nav>
+        {/* Quote Section */}
+        <div className="container-fluid  p-4 text-center border-top border-bottom mt-4">
+            <h3>
+            Travel is the only thing you buy that makes you richer...
+            </h3>
+        </div>
+    </>
   )
 }
 

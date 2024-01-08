@@ -1,5 +1,6 @@
 import postData from "./data/posts.json";
 import Nav from "./Components/Nav";
+import Hero from "./Components/Hero";
 
 function App() {
   console.log(postData);
@@ -9,7 +10,7 @@ function App() {
     // </main>
     <>
     <Nav />
-    {/* <Posts /> */}
+    <Hero />
     {/* <PostsByLocationTable /> */}
     {/* <Footer /> */}
     </>
