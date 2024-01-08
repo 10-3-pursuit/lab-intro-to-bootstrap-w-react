@@ -12,7 +12,7 @@ function App() {
     <>
     <Nav />
     <Hero />
-    <PostsByLocationTable />
+    <PostsByLocationTable posts={postData} />
     {/* <Footer /> */}
     </>
   );

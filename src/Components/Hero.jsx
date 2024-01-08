@@ -5,7 +5,6 @@ import Card from "./Card"
 import PostsByLocationTable from "./PostsByLocationTable"
 
 const Hero = () => {
-  const [allPosts, setAllPosts] = useState(postData)
   return (
     <main className="container-fluid mt-3" id="hero">
       {/* Search Form */}
@@ -26,9 +25,22 @@ const Hero = () => {
 
 
       <section className="mt-3 row">
-      {allPosts.map((post) => (
-          <Card post={post} key={post.id}/>
-        ))}
+        {/* Left Column - Cards */}
+        <div className="col-9">
+          <div className="row">
+            {postData.map((post) => (
+              // left column split into 2 colums of equal size
+              <div className="col-6" key={post.id}>
+                <Card post={post}/>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Column - Table */}
+        <div className="col-3">
+          <PostsByLocationTable posts={postData}/>
+        </div>
       </section>
 
     </main>

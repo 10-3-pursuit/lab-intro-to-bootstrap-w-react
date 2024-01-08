@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+body {
+  margin-left: 150px;
+  margin-right: 150px
+}
 span{
   color: gold;
 }
