@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import postData from "./data/posts.json";
 import Nav from "./components/Nav";
+import Header from "./components/Header";
 
 function App() {
   const [filteredPosts, setFilteredPosts] = useState(postData);
@@ -43,10 +44,7 @@ function App() {
   return (
     <main>
       <Nav />
-  
-      <h2>
-        Travel is the only thing you buy that makes you richer...
-      </h2>
+      <Header />
   
       <div>
         <label htmlFor="search">
