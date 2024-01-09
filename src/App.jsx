@@ -16,15 +16,15 @@ function App() {
             <h1>Travel is the only thing you buy that makes you richer</h1>
             <label htmlFor="search" className="form-label">
                 Search posts by location...
-                <input
-                    value={searchText}
-                    onChange={handleTextChange}
-                    type="text"
-                    name="search"
-                    id="search"
-                    className="form-control"
-                />
             </label>
+            <input
+                value={searchText}
+                onChange={handleTextChange}
+                type="text"
+                name="search"
+                id="search"
+                className="form-control"
+            />
             <button>Cancel</button>
             <div>
                 {postData.map((post) => {
@@ -37,23 +37,25 @@ function App() {
                             .includes(searchText.toLowerCase())
                     ) {
                         return (
-                            <li key={post.id}>
-                                <p>{post.title}</p>
-                                <p>{post.location}</p>
-                                <p>{post.content}</p>
+                            <div key={post.id}>
                                 <img
                                     src={`src/images/${post.location
                                         .toLowerCase()
                                         .replace(" ", "-")}.jpg`}
                                     alt={`photo of ${post.location}`}
                                 />
+                                <p>{post.title}</p>
+                                <p>{post.location}</p>
+                                <p>{post.content}</p>
                                 <br />
                                 <button>Go to post</button>
-                            </li>
+                            </div>
                         );
                     } else return null;
                 })}
-                <p>Posts by location</p>
+                <table>
+                    <th>Location</th>
+                </table>
             </div>
         </main>
     );
