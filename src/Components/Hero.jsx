@@ -66,7 +66,7 @@ const Hero = ({posts}) => {
           </div>
         ) : (
           <div className="col-9">
-            <p className="alert alert-danger">No matching posts found.</p>
+            <p className="alert alert-danger" role="alert">No posts found with the search term "{searchInput}". Please try again.</p>
           </div>
         )}
 
