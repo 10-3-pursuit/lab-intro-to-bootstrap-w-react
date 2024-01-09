@@ -7,7 +7,7 @@ const Nav = () => {
                 {/* Navbar Links */}
                 <div className="navbar-nav flex-row">
                     {/* Home Logo */}
-                    <a className="navbar-brand fs-1" href="#">Travel <span className="script-font">Blog</span></a>
+                    <a className="navbar-brand fs-1" href="#">Travel <span className="script-font text-warning">Blog</span></a>
                     <a className="nav-link me-3 ms-3 my-3" href="/about">About</a>
                     <a className="nav-link my-3" href="/popular-posts">Popular Posts</a>
                 </div>

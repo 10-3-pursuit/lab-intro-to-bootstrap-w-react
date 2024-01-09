@@ -16,7 +16,8 @@ const Card = ({post}) => {
             case "San Diego":
                 return images["san-diego"] 
 
- //CORRECT: images["san-francisco"] - when the property name contains special characters, spaces, or hyphens, you must use bracket notation
+//CORRECT: images["san-francisco"] - when the property name contains special characters, spaces, or hyphens, you must use bracket notation
+
 //INCORRECT: images.san-francisco -  would be treated as subtracting 'francisco' from images.san
 
             case "San Francisco":
@@ -27,15 +28,13 @@ const Card = ({post}) => {
                 return images.sevilla
             case "Shibuya":
                 return images.shibuya
-            default: 
-                return ""
         }
     }
 
   return (
     <div className="card">
         <img 
-            src={getImagePath(post)} 
+            src={getImagePath(post)}
             className="card-img-top object-fit-cover" 
             alt={`Image for ${post.location}`} 
         />

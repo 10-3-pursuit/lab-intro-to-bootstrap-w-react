@@ -25,7 +25,6 @@ const Hero = ({posts}) => {
   }
 
   const result = filterPosts(searchInput, posts)
-  // const result = filteredPosts.length ? filteredPosts : posts
 
   return (
     <main className="container mt-3" id="hero">
