@@ -26,28 +26,21 @@ export const Search = (props) => {
   }, [searchWord]);
 
   return (
-    <>
-      {console.log(props.filteredPost)}
-      <form className="d-flex p-5" role="search">
-        <label htmlFor="search">Search posts by location...</label>
-        <input
-          id="search"
-          name="search"
-          className="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          value={searchWord}
-          onChange={handleChange}
-        />
-        <button
-          className="btn btn-warning"
-          type="button"
-          onClick={handleCancel}
-        >
-          Cancel
-        </button>
-      </form>
-    </>
+    <form className="d-flex p-5" role="search">
+      <label htmlFor="search">Search posts by location...</label>
+      <input
+        id="search"
+        name="search"
+        className="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        value={searchWord}
+        onChange={handleChange}
+      />
+      <button className="btn btn-warning" type="button" onClick={handleCancel}>
+        Cancel
+      </button>
+    </form>
   );
 };

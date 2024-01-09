@@ -5,6 +5,7 @@ import { Search } from "./Components/Search";
 import { CardListing } from "./Components/CardListing";
 import { Aside } from "./Components/Aside";
 import { useState } from "react";
+import { Footer } from "./Components/Footer";
 
 function App() {
   const [filteredPost, setFilteredPost] = useState(postData);
@@ -24,6 +25,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
