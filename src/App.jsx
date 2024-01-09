@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import postData from "./data/posts.json";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
-  const [filteredPosts, setFilteredPosts] = useState(postData);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [uniqueLocations, setUniqueLocations] = useState({});
+  const [filteredPosts, setFilteredPosts] = useState(postData); // holds the array of posts that match the search criteria.
+  const [searchTerm, setSearchTerm] = useState(''); // current value of search input
+  const [uniqueLocations, setUniqueLocations] = useState({}); // holds count of posts depending on location. It expects an object because it counts the keys in locations object created in the useEffect (needed to show posts and update the table)
 
   // Handle search input change
   const handleSearchChange = (e) => {
@@ -25,14 +26,14 @@ function App() {
     );
     setFilteredPosts(filtered);
 
-    // Calculate posts by location
-    const locations = {};
+    // Calculate posts by location (also used for the table!!!)
+    const locations = {}; // empty at the beginning - a local variable that is created each time the useEffect hook runs. The purpose of this object is to calculate and hold the count of posts for each unique location based on the currently filtered posts.
     filtered.forEach(post => {
-      locations[post.location] = (locations[post.location] || 0) + 1;
+      locations[post.location] = (locations[post.location] || 0) + 1; // checks if its location is already a key in the locations object if so then + 1 if not then it's initialized with count of 1
     });
-    setUniqueLocations(locations);
+    setUniqueLocations(locations); // After populating the locations object with the counts for each location, the setUniqueLocations function (part of your component's state) is called to update the uniqueLocations state with this new data.
 
-  }, [searchTerm]);
+  }, [searchTerm]); // locations object is recreated every time the useEffect hook runs, which happens whenever the searchTerm changes (as indicated by the dependency array [searchTerm] of the useEffect hook)
 
   function abbreviateString(str, maxLength) {
     // Check if the string's length is greater than the maximum length
@@ -99,12 +100,7 @@ function App() {
           </tbody>
         </table>
       </div>
-  
-      <footer>
-        <p>Contact me</p>
-        <p>Copyright My Travelblog 2020</p>
-        <p>About the author details here</p>
-      </footer>
+      <Footer />
     </main>
   );
 }  

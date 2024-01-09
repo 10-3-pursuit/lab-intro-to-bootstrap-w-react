@@ -1,3 +1,63 @@
+# Functionality
+## Explaining useEffect
+
+`uniqueLocations` is initialized as an empty object:
+
+```javascript
+const [uniqueLocations, setUniqueLocations] = useState({});
+```
+
+ `uniqueLocations` is an object where each key is a unique location name and each value is the number of posts associated with that location. This approach is used to easily keep track of counts for multiple items (in this case, locations) in a single data structure.
+
+1. **Filtering Posts**: First, the posts are filtered based on the `searchTerm`. Only posts with titles or locations matching the `searchTerm` are included.
+
+2. **Calculating Post Counts by Location**:
+   - An empty object `locations` is created.
+   - For each post in the filtered list, the code checks if its location already exists as a key in the `locations` object.
+   - If it does, the count for that location is incremented. If not, the location is added to the object with a count of 1.
+   - This process results in an object where each key is a location, and each value is the number of posts at that location.
+
+3. **Updating `uniqueLocations` State**: The `locations` object, which now contains the count of posts for each location, is then used to update the `uniqueLocations` state.
+
+Here's the relevant part of the code:
+
+```javascript
+const locations = {};
+filtered.forEach(post => {
+  locations[post.location] = (locations[post.location] || 0) + 1;
+});
+setUniqueLocations(locations);
+```
+
+## "If the location does not exist in locations, it is added with an initial count of 1" but why?
+The reason for initializing the count to 1 when a location does not already exist in the `locations` object is to correctly count the number of posts for each unique location. This process is part of creating a frequency map, where each key is a unique item (in this case, a location), and each value is the count of occurrences of that item (the number of posts for that location).
+
+Here's a step-by-step explanation of why and how this is done:
+
+1. **Objective**: The goal is to count how many posts are associated with each unique location.
+
+2. **Initializing the Count**: When iterating over the filtered posts:
+   - If a post's location is already in the `locations` object, it means we have seen this location before, and thus, we increment the existing count.
+   - If a post's location is not in the `locations` object, this is the first time we're encountering this location. Therefore, we need to add this new location to the `locations` object. Since it's the first post for this location, we start the count at 1.
+
+3. **Updating the `locations` Object**:
+   ```javascript
+   filtered.forEach(post => {
+     locations[post.location] = (locations[post.location] || 0) + 1;
+   });
+   ```
+   - For each post in `filtered`, the code checks if `post.location` exists as a key in `locations`.
+   - `locations[post.location] || 0` is an expression that evaluates to the current count if `post.location` exists, or 0 if it doesn’t exist.
+   - Adding 1 to this expression increments the count for an existing location or initializes it to 1 for a new location.
+
+4. **Example**:
+   - Imagine you have posts with locations like ["Paris", "New York", "Paris"].
+   - When the first "Paris" post is encountered, "Paris" is not in `locations`, so it's added with a count of 1.
+   - When "New York" is encountered, it's also not in `locations`, so it's added with a count of 1.
+   - When the second "Paris" post is encountered, "Paris" is already in `locations` with a count of 1, so the count is incremented to 2.
+
+This method ensures that each unique location is correctly counted, even if it's the first time that location is encountered in the list of posts.
+
 # Bootstrap classes used
 
 1. **`<main className="container">`**:
