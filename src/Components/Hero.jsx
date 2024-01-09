@@ -24,8 +24,8 @@ const Hero = ({posts}) => {
     setSearchInput("")
   }
 
-  const filteredPosts = filterPosts(searchInput, posts)
-  const result = filteredPosts.length ? filteredPosts : posts
+  const result = filterPosts(searchInput, posts)
+  // const result = filteredPosts.length ? filteredPosts : posts
 
   return (
     <main className="container mt-3 mb-3" id="hero">
@@ -51,19 +51,24 @@ const Hero = ({posts}) => {
           </div>
         </form>
       </div>
-      
+
       <section className="mt-3 row">
-        {/* Left Column - Cards */}
-        <div className="col-md-9">
-          <div className="row">
-            {result.map((post) => (
-              // left column split into 2 colums of equal size
-              <div className="col-md-6 mb-3" key={post.id}>
-                <Card post={post}/>
-              </div>
-            ))}
+      {/* Left Column - Cards */}
+        {result.length > 0 ? (
+          <div className="col-md-9">
+            <div className="row">
+              {result.map((post) => (
+                <div className="col-md-6 mb-3" key={post.id}>
+                  <Card post={post}/>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="col-9">
+            <p className="alert alert-danger">No matching posts found.</p>
+          </div>
+        )}
 
         {/* Right Column - Table */}
         <div className="col-md-3">
