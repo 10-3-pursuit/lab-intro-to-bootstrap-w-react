@@ -54,11 +54,11 @@ const Hero = ({posts}) => {
       
       <section className="mt-3 row">
         {/* Left Column - Cards */}
-        <div className="col-lg-9">
+        <div className="col-md-9">
           <div className="row">
             {result.map((post) => (
               // left column split into 2 colums of equal size
-              <div className="col-lg-6 mb-3 col-md-10" key={post.id}>
+              <div className="col-md-6 mb-3" key={post.id}>
                 <Card post={post}/>
               </div>
             ))}
@@ -66,7 +66,7 @@ const Hero = ({posts}) => {
         </div>
 
         {/* Right Column - Table */}
-        <div className="col-lg-3">
+        <div className="col-md-3">
           <PostsByLocationTable posts={posts}/>
         </div>
       </section>

@@ -4,11 +4,13 @@ const Footer = () => {
   return (
     <aside className="navbar bg-warning p-4">
         <div className="container-fluid row">
-            <div className="col-7 d-grid justify-content-end">
+            <div className="col-md-7 d-md-grid justify-content-end mb-1">
                 <a className="nav-link p-1" href="#">Contact Me</a>
                 <a className="nav-link p-1" href="#">About the Author</a>
             </div>
-            <p className="col-3 align-self-start">Copyright <span> My TravelBlog</span> 2020</p>
+            <div className="col-md-3 align-self-start">
+                <p >Copyright <span> My TravelBlog</span> 2020</p>
+            </div>
         </div>
     </aside>
   )
