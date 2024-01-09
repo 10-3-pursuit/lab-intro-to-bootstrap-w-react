@@ -18,7 +18,7 @@ const PostsByLocationTable = ({posts}) => {
             <thead>
                 <tr>
                     <th scope="col">Location</th>
-                    <th scope="col">Posts</th>
+                    <th scope="col" >Posts</th>
                 </tr>
             </thead>
             <tbody>

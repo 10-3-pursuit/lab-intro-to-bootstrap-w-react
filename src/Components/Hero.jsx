@@ -26,7 +26,7 @@ const Hero = ({posts}) => {
   const result = filteredPosts.length ? filteredPosts : posts
 
   return (
-    <main className="container-fluid mt-3 mb-3" id="hero">
+    <main className="container mt-3 mb-3" id="hero">
       {/* Search Form */}
       <div className="row">
         <form className="d-flex" role="search">
@@ -47,9 +47,8 @@ const Hero = ({posts}) => {
           </button>
         </form>
       </div>
-
-
-      <section className="mt-3 row">
+      
+      <section className="mt-4 row">
         {/* Left Column - Cards */}
         <div className="col-9">
           <div className="row">
