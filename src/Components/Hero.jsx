@@ -29,26 +29,28 @@ const Hero = ({posts}) => {
     <main className="container mt-3 mb-3" id="hero">
       {/* Search Form */}
       <div className="row">
-        <form className="d-flex" role="search">
+        <form className="d-flex align-items-center" role="search">
           <label htmlFor="searchInput" className="form-label">Search posts by location...</label>
           <input
             id="searchInput"
-            className="form-control flex-grow-1 me-2"
+            className="form-control"
             type="search"
             aria-label="Search"
             onChange={handleTextChange}
             value={searchInput}
           />
-          <button 
-            className="btn btn-warning" 
-            type="button" 
-            onClick={handleCancel}>
-            Cancel
-          </button>
+          <div className="ms-4">
+            <button 
+              className="btn btn-warning" 
+              type="button" 
+              onClick={handleCancel}>
+              Cancel
+            </button>
+          </div>
         </form>
       </div>
       
-      <section className="mt-4 row">
+      <section className="mt-3 row">
         {/* Left Column - Cards */}
         <div className="col-9">
           <div className="row">

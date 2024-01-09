@@ -3,7 +3,7 @@ const Nav = () => {
   return (
     <>
         <nav className="navbar navbar-expand-lg">
-            <div className="container mt-3">
+            <div className="container">
                 {/* Navbar Links */}
                 <div className="navbar-nav flex-row">
                     {/* Home Logo */}
@@ -14,7 +14,7 @@ const Nav = () => {
             </div>
         </nav>
         {/* Quote Section */}
-        <div className="container-fluid p-4 text-center border-top border-bottom mt-4 bg-body-tertiary quote">
+        <div className="container-fluid p-4 text-center border-top border-bottom bg-body-tertiary quote">
             <h2 className="script-font">
             Travel is the only thing you buy that makes you richer...
             </h2>
