@@ -7,6 +7,10 @@ body {
 span{
   color: gold;
 }
+
+img{
+  max-height: 230px
+}
 .script-font {
   font-family: "Great Vibes", cursive;
 }
