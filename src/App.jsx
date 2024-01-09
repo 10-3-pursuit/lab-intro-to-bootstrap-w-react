@@ -13,6 +13,10 @@ function App() {
     setSearchTerm(e.target.value);
   };
 
+  const resetSearch = () => {
+    setSearchTerm("");
+  };
+
   // Filter posts based on search term
   useEffect(() => {
     const filtered = postData.filter(
@@ -57,7 +61,7 @@ function App() {
           name="search"
           id="search"
         />
-        <button>Cancel</button>
+        <button onClick={resetSearch}>Cancel</button>
       </div>
   
       <div>
