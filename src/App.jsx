@@ -5,11 +5,7 @@ import Footer from "./Components/Footer";
 
 
 function App() {
-  console.log(postData);
   return (
-    // <main>
-    //   <button className="btn">hi</button>
-    // </main>
     <>
     <Nav />
     <Hero posts={postData}/>

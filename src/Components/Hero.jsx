@@ -25,6 +25,9 @@ const Hero = ({posts}) => {
   }
 
   const result = filterPosts(searchInput, posts)
+  // result will contain either all the posts or the mactching post(s).
+  // calling toLowerCase() on an empty string returns the empty string
+
 
   return (
     <main className="container mt-3" id="hero">

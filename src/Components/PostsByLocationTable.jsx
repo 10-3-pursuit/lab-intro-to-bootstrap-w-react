@@ -14,26 +14,26 @@ const PostsByLocationTable = ({posts}) => {
     return (
     <>
         <h4>Posts by <span>location</span></h4>
-            <table className="table">
-            <thead>
-                <tr>
-                    <th scope="col">Location</th>
-                    <th scope="col"className="text-center" >Posts</th>
+        <table className="table">
+        <thead>
+            <tr>
+                <th scope="col">Location</th>
+                <th scope="col"className="text-center" >Posts</th>
+            </tr>
+        </thead>
+        <tbody>
+            {/* Object.entries converts the object postCountByLocation into an array of [key, value] pairs */}
+            {Object.entries(postCountByLocation).map(([location, count]) => (
+                <tr key={location}>
+                    <td>{location}</td>
+                    <td className="text-center">
+                        <span className="badge bg-secondary">{count}</span>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                {/* Object.entries converts the object postCountByLocation into an array of [key, value] pairs */}
-                {Object.entries(postCountByLocation).map(([location, count]) => (
-                    <tr key={location}>
-                        <td>{location}</td>
-                        <td className="text-center">
-                            <span className="badge bg-secondary">{count}</span>
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
-            </table>
-        </>  
+            ))}
+        </tbody>
+        </table>
+    </>  
   )
 }
 
