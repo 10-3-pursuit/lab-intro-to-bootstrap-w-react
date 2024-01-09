@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import Header from "./Header";
 import { v4 as uuidv4 } from "uuid";
 
 import postData from "./data/posts.json";
@@ -25,7 +26,7 @@ function App() {
     return (
         <main>
             <Nav />
-            <h1>Travel is the only thing you buy that makes you richer</h1>
+            <Header />
             <label htmlFor="search" className="form-label">
                 Search posts by location...
             </label>
@@ -39,8 +40,11 @@ function App() {
             />
             <button>Cancel</button>
             <br />
-            <div className="container" style={{ display: "inline-block" }}>
-                <div className="container" style={{ display: "inline-block" }}>
+            <main className="container" style={{ display: "inline-block" }}>
+                <div
+                    className="row align-items-start"
+                    style={{ display: "inline-block" }}
+                >
                     {postData.map((post) => {
                         if (
                             post.title
@@ -67,7 +71,10 @@ function App() {
                         } else return null;
                     })}
                 </div>
-                <div className="" style={{ display: "inline-block" }}>
+                <div
+                    className="row align-items-start"
+                    style={{ display: "inline-block" }}
+                >
                     Posts by location
                     <table className="table table-sm table-striped table-hover">
                         <thead>
@@ -86,7 +93,7 @@ function App() {
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </main>
             <Footer />
         </main>
     );
