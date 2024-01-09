@@ -1,12 +1,32 @@
 
 import { useState } from "react"
-import postData from "../data/posts.json"
 import Card from "./Card"
 import PostsByLocationTable from "./PostsByLocationTable"
 
-const Hero = () => {
+
+const Hero = ({posts}) => {
+  const [searchInput, setSearchInput] = useState("")
+
+  function filterPosts(searchInput, posts) {
+    return posts.filter((post) => {
+      return post.title.toLowerCase().match(searchInput.toLowerCase());
+    });
+  }
+
+  function handleTextChange(event){
+    const input = event.target.value
+    setSearchInput(input)
+  }
+
+  function handleCancel(){
+    setSearchInput("")
+  }
+
+  const filteredPosts = filterPosts(searchInput, posts)
+  const result = filteredPosts.length ? filteredPosts : posts
+
   return (
-    <main className="container-fluid mt-3" id="hero">
+    <main className="container-fluid mt-3 mb-3" id="hero">
       {/* Search Form */}
       <div className="row">
         <form className="d-flex" role="search">
@@ -16,8 +36,13 @@ const Hero = () => {
             className="form-control flex-grow-1 me-2"
             type="search"
             aria-label="Search"
+            onChange={handleTextChange}
+            value={searchInput}
           />
-          <button className="btn btn-warning" type="button">
+          <button 
+            className="btn btn-warning" 
+            type="button" 
+            onClick={handleCancel}>
             Cancel
           </button>
         </form>
@@ -28,7 +53,7 @@ const Hero = () => {
         {/* Left Column - Cards */}
         <div className="col-9">
           <div className="row">
-            {postData.map((post) => (
+            {result.map((post) => (
               // left column split into 2 colums of equal size
               <div className="col-6" key={post.id}>
                 <Card post={post}/>
@@ -39,7 +64,7 @@ const Hero = () => {
 
         {/* Right Column - Table */}
         <div className="col-3">
-          <PostsByLocationTable posts={postData}/>
+          <PostsByLocationTable posts={posts}/>
         </div>
       </section>
 
