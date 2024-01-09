@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import postData from "./data/posts.json";
+import Nav from "./components/Nav";
 
 function App() {
   const [filteredPosts, setFilteredPosts] = useState(postData);
@@ -27,7 +28,7 @@ function App() {
     setUniqueLocations(locations);
 
   }, [searchTerm]);
-  
+
   function abbreviateString(str, maxLength) {
     // Check if the string's length is greater than the maximum length
     if (str.length > maxLength) {
@@ -41,17 +42,7 @@ function App() {
 
   return (
     <main>
-      <nav>
-        <a href="#">Travel<span>Blog</span></a>
-        <ul>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Popular Post</a>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
   
       <h2>
         Travel is the only thing you buy that makes you richer...
