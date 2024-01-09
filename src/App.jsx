@@ -35,16 +35,16 @@ function App() {
 
   }, [searchTerm]); // locations object is recreated every time the useEffect hook runs, which happens whenever the searchTerm changes (as indicated by the dependency array [searchTerm] of the useEffect hook)
 
-  function abbreviateString(str, maxLength) {
-    // Check if the string's length is greater than the maximum length
-    if (str.length > maxLength) {
-      // Truncate the string to the maxLength minus 3 (for the ellipsis) and add '...'
-      return str.substring(0, maxLength - 3) + "...";
-    } else {
-      // If the string is shorter than maxLength, return it as is
-      return str;
-    }
-  }  
+  // function abbreviateString(str, maxLength) {
+  //   // Check if the string's length is greater than the maximum length
+  //   if (str.length > maxLength) {
+  //     // Truncate the string to the maxLength minus 3 (for the ellipsis) and add '...'
+  //     return str.substring(0, maxLength - 3) + "...";
+  //   } else {
+  //     // If the string is shorter than maxLength, return it as is
+  //     return str;
+  //   }
+  // }  
 
   return (
     <main>
@@ -76,7 +76,7 @@ function App() {
               />
               <div>
                 <h4>{post.title}</h4>
-                <p>{abbreviateString(post.content, 100)}</p>
+                <p className="text-truncate">{post.content}</p>
                 <a href="#">Go to post</a>
               </div>
             </div>
