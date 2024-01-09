@@ -28,19 +28,26 @@ const Hero = ({posts}) => {
   // const result = filteredPosts.length ? filteredPosts : posts
 
   return (
-    <main className="container mt-3 mb-3" id="hero">
+    <main className="container mt-3" id="hero">
       {/* Search Form */}
-      <div className="row">
-        <form className="d-flex align-items-center" role="search">
-          <label htmlFor="searchInput" className="form-label d-none d-md-block">Search posts by location...</label>
-          <input
-            id="searchInput"
-            className="form-control d-none d-md-block"
-            type="search"
-            aria-label="Search"
-            onChange={handleTextChange}
-            value={searchInput}
-          />
+      <div className="row mb-3">
+        <form className="d-flex align-items-center justify" role="search">
+          
+          <div className="col-auto me-1">
+            <label htmlFor="searchInput" className="form-label d-none d-md-block">Search posts by location...</label>
+          </div>
+          
+          <div className="col">
+            <input
+              id="searchInput"
+              className="form-control d-none d-md-block"
+              type="search"
+              aria-label="Search"
+              onChange={handleTextChange}
+              value={searchInput}
+            />
+          </div>
+
           <div className="ms-4">
             <button 
               className="btn btn-warning btn-sm d-none d-md-block" 
@@ -52,7 +59,7 @@ const Hero = ({posts}) => {
         </form>
       </div>
 
-      <section className="mt-1 row">
+      <section className="row">
       {/* Left Column - Cards */}
         {result.length > 0 ? (
           <div className="col-md-9">
