@@ -9,7 +9,9 @@ const Nav = () => {
             <h1 style={{ display: "inline" }}>
                 Travel <span className="script-font">Blog</span>
             </h1>
-            <a className="link-underline link-underline-opacity-0">About</a>
+            <a className="link-underline link-underline-opacity-0" href="#">
+                About
+            </a>
             <a className="">Popular posts</a>
         </nav>
     );
