@@ -30,7 +30,7 @@ const Hero = ({posts}) => {
       {/* Search Form */}
       <div className="row">
         <form className="d-flex" role="search">
-          <label htmlFor="searchInput" className="form-label">Search posts by location</label>
+          <label htmlFor="searchInput" className="form-label">Search posts by location...</label>
           <input
             id="searchInput"
             className="form-control flex-grow-1 me-2"
