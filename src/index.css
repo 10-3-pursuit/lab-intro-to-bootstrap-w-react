@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-span{
+a span{
   color: gold;
+}
+p span{
+  font-weight: bold;
 }
 
 img{

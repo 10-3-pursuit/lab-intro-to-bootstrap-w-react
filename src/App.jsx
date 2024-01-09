@@ -1,6 +1,7 @@
 import postData from "./data/posts.json";
 import Nav from "./Components/Nav";
 import Hero from "./Components/Hero";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <>
     <Nav />
     <Hero posts={postData}/>
-    {/* <Footer /> */}
+    <Footer />
     </>
   );
 }
