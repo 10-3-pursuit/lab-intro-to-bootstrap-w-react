@@ -32,10 +32,10 @@ const Hero = ({posts}) => {
       {/* Search Form */}
       <div className="row">
         <form className="d-flex align-items-center" role="search">
-          <label htmlFor="searchInput" className="form-label">Search posts by location...</label>
+          <label htmlFor="searchInput" className="form-label d-none d-md-block">Search posts by location...</label>
           <input
             id="searchInput"
-            className="form-control"
+            className="form-control d-none d-md-block"
             type="search"
             aria-label="Search"
             onChange={handleTextChange}
@@ -43,7 +43,7 @@ const Hero = ({posts}) => {
           />
           <div className="ms-4">
             <button 
-              className="btn btn-warning btn-sm" 
+              className="btn btn-warning btn-sm d-none d-md-block" 
               type="button" 
               onClick={handleCancel}>
               Cancel
@@ -52,7 +52,7 @@ const Hero = ({posts}) => {
         </form>
       </div>
 
-      <section className="mt-3 row">
+      <section className="mt-1 row">
       {/* Left Column - Cards */}
         {result.length > 0 ? (
           <div className="col-md-9">

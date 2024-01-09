@@ -36,7 +36,7 @@ const Card = ({post}) => {
     <div className="card">
         <img 
             src={getImagePath(post)} 
-            className="card-img-top" 
+            className="card-img-top object-fit-cover" 
             alt={`Image for ${post.location}`} 
         />
         <div className="card-body">

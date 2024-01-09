@@ -14,7 +14,7 @@ const Nav = () => {
             </div>
         </nav>
         {/* Quote Section */}
-        <div className="container-fluid p-4 text-center border-top border-bottom bg-body-tertiary">
+        <div className="container-fluid p-4 text-center border-top border-bottom bg-body-tertiary d-none d-md-block">
             <h2 className="script-font">
             Travel is the only thing you buy that makes you richer...
             </h2>
