@@ -69,6 +69,7 @@ function App() {
         {filteredPosts.map((post) => (
           <div key={post.id}>
             <div>
+              {/* the template literal, post.location.toLowerCase().replace(" ", "-") takes the location property of the current post, converts it to lowercase, and then replaces any spaces with hyphens bc can't use space in paths. This string is then appended to src/images/ and .jpg to form the path to the image file. For example, if post.location is "New York", the src would be src/images/new-york.jpg */}
               <img
                 src={`src/images/${post.location.toLowerCase().replace(" ", "-")}.jpg`}
                 alt={`photo of ${post.location}`}
@@ -79,6 +80,7 @@ function App() {
                 <a href="#">Go to post</a>
               </div>
             </div>
+            {/* error message */}
           </div>
         ))}
         {!filteredPosts.length && <p>No posts found</p>}

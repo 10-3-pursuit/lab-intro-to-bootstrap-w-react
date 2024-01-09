@@ -60,6 +60,8 @@ This method ensures that each unique location is correctly counted, even if it's
 
 # Bootstrap classes used
 
+## Classes used in class example:
+
 1. **`<main className="container">`**:
    - `container`: This is a fundamental class in Bootstrap that centers your content horizontally and provides a responsive fixed-width container. It adjusts the maximum width of the content at different breakpoints (screen sizes).
 
@@ -107,4 +109,34 @@ This method ensures that each unique location is correctly counted, even if it's
 13. **`<table className="table">`**:
     - `table`: Applies Bootstrap's basic styling to the `<table>` element, improving its appearance with minimal, neat styling.
 
-These Bootstrap classes are designed to make it easier to create responsive and aesthetically pleasing web interfaces without writing a lot of custom CSS. They cover a wide range of styling needs, from layout to typography to form controls and more.
+## Classes used in this application
+
+### Nav.jsx
+
+1. **`<nav className="navbar">`**:
+   - `navbar`: A Bootstrap class used for styling the navigation bar, providing a flexible and responsive container for navigation links.
+
+2. **`<div className="container-fluid me-auto">`**:
+   - `container-fluid`: A Bootstrap class for a full-width container, spanning the entire width of the viewport.
+   - `me-auto`: A utility class in Bootstrap for setting the margin end (right margin in left-to-right languages) to auto.
+
+3. **`<a className="navbar-brand" href="#">`**:
+   - `navbar-brand`: A Bootstrap class used for brand or logo elements in a navbar, typically used for the home link or main title in the navbar.
+
+4. **`<span className="script-font text-warning">`**:
+   - `script-font`: This appears to be a custom class and not a Bootstrap class.
+   - `text-warning`: A Bootstrap utility class that applies a warning or yellow-themed text color.
+
+5. **`<ul className="navbar-nav flex-row me-auto">`**:
+   - `navbar-nav`: A Bootstrap class for styling the navigation list in a navbar.
+   - `flex-row`: A Bootstrap flex utility class that arranges the flex items in a row.
+   - `me-auto`: As mentioned earlier, sets the margin end to auto.
+
+6. **`<li className="nav-item mx-2">`**:
+   - `nav-item`: A Bootstrap class used for list items within `navbar-nav`.
+   - `mx-2`: A utility class in Bootstrap for setting both left and right margins (margin on the X-axis) to a value of 2.
+
+7. **`<a className="nav-link" href="#">`**:
+   - `nav-link`: A Bootstrap class used for links within `nav-item`, styling them appropriately for the navbar context.
+
+These classes combine to create a responsive and styled navigation bar, with utility classes for spacing and alignment. Bootstrap's navbar component is designed to be flexible and easily customizable for different navigation layouts.
