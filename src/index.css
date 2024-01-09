@@ -7,3 +7,72 @@
 .post-image-height {
   height: 250px;
 }
+  
+
+footer ul {
+  list-style-type: none;
+}
+footer li span {
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+footer {
+  background-color: gold;
+  width: 100%;
+  padding: 20px; 
+}
+
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li span {
+  font-weight: bold;
+}
+
+.container-fluid {
+  margin-left: 10px;
+}
+
+.nav-item {
+  margin-left: 80px;
+}
+
+.border  {
+  margin-left: 10px;
+  width: 500px;
+  margin-bottom: 50px;
+}
+
+.position-absolute {
+  margin-right: 137px ;
+  margin-top: 290px ;
+}
+.position-absolute span{
+  color: gold;
+}
+
+.search-bar  {
+  
+  margin-bottom: 10px;
+}
+.search-bar h3 {
+  font-size: 14px;
+  margin-left: 20px;
+
+}
