@@ -43,7 +43,7 @@ const Hero = ({posts}) => {
           />
           <div className="ms-4">
             <button 
-              className="btn btn-warning" 
+              className="btn btn-warning btn-sm" 
               type="button" 
               onClick={handleCancel}>
               Cancel

@@ -33,7 +33,7 @@ const Card = ({post}) => {
     }
 
   return (
-    <div className="card h-100">
+    <div className="card">
         <img 
             src={getImagePath(post)} 
             className="card-img-top" 
@@ -43,7 +43,10 @@ const Card = ({post}) => {
             <h5 className="card-title">{post.title}</h5>
             <p className="card-subtitle mb-2 text-body-secondary">{post.location}</p>
             <p className="card-text text-truncate">{post.content}</p>
-            <button className="btn btn-warning">Go to post</button>
+            <div className="float-end me-1">
+
+            <button className="btn btn-warning btn-sm ">Go to post </button>
+            </div>
         </div>
     </div>
   )
