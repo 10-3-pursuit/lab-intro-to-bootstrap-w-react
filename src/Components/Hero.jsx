@@ -9,8 +9,10 @@ const Hero = ({posts}) => {
 
   function filterPosts(searchInput, posts) {
     return posts.filter((post) => {
-      return post.title.toLowerCase().match(searchInput.toLowerCase());
-    });
+      const titleMatch = post.title.toLowerCase().match(searchInput.toLowerCase())
+      const locationMatch = post.location.toLowerCase().match(searchInput.toLowerCase())
+      return titleMatch || locationMatch
+    })
   }
 
   function handleTextChange(event){
@@ -56,7 +58,7 @@ const Hero = ({posts}) => {
           <div className="row">
             {result.map((post) => (
               // left column split into 2 colums of equal size
-              <div className="col-6" key={post.id}>
+              <div className="col-6 mb-3" key={post.id}>
                 <Card post={post}/>
               </div>
             ))}
