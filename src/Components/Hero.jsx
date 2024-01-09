@@ -50,7 +50,7 @@ const Hero = ({posts}) => {
             />
           </div>
 
-          <div className="ms-4">
+          <div className="ms-1">
             <button 
               className="btn btn-warning btn-sm d-none d-md-block" 
               type="button" 
