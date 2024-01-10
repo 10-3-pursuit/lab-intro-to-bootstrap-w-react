@@ -164,8 +164,6 @@ These classes combine to create a responsive and styled navigation bar, with uti
 
 ### Footer.jsx
 
-Certainly! Here's an updated list including the Bootstrap class names used in your footer HTML snippet:
-
 1. **`<footer className="bg-warning text-center text-lg-end text-white">`**:
    - `bg-warning`: A Bootstrap class for applying a warning or yellow background color.
    - `text-center`: Centers text horizontally within the element.

@@ -3,16 +3,17 @@ import postData from "./data/posts.json";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Search from "./components/Search/Search";
 
 function App() {
   const [filteredPosts, setFilteredPosts] = useState(postData); // holds the array of posts that match the search criteria.
   const [searchTerm, setSearchTerm] = useState(''); // current value of search input
   const [uniqueLocations, setUniqueLocations] = useState({}); // holds count of posts depending on location. It expects an object because it counts the keys in locations object created in the useEffect (needed to show posts and update the table)
 
-  // Handle search input change
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+  // Handle search input change - moved to Search.jsx
+  // const handleSearchChange = (e) => {
+  //   setSearchTerm(e.target.value);
+  // };
 
   const resetSearch = () => {
     setSearchTerm("");
@@ -50,8 +51,8 @@ function App() {
     <main>
       <Nav />
       <Header />
-  
-      <div>
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} resetSearch={resetSearch} />
+      {/* <div>
         <label htmlFor="search">
           Search posts by location...
         </label>
@@ -63,7 +64,7 @@ function App() {
           id="search"
         />
         <button onClick={resetSearch}>Cancel</button>
-      </div>
+      </div> */}
   
       <div>
         {filteredPosts.map((post) => (
