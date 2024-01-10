@@ -3,7 +3,21 @@ import postData from "./data/posts.json";
 function App() {
   console.log(postData);
   return (
-    <main>
+
+
+    <main className="container">
+      <div className="row" />
+      <div> </div>
+          {/* Two cards with images */}
+          <div className="card mb-3">
+            <img src="./images/seattle.img" className="card-img-" alt="Card 1" />
+            <div className="card-body">
+              <h5 className="card-title">A sunny day in Seattle</h5>
+              <p className="card-text">Seattle</p>
+            </div>
+          </div>
+
+
    
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
