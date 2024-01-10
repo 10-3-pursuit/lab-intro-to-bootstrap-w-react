@@ -26,12 +26,16 @@ export const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link py-2 px-3" href="#">
+              <a
+                className="nav-link active py-2 px-3"
+                aria-current="page"
+                href="#"
+              >
                 <h5>About</h5>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#popular-posts">
                 <h5>Popular Posts</h5>
               </a>
             </li>

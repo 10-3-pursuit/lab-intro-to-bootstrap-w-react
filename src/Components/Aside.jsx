@@ -8,8 +8,6 @@ export const Aside = () => {
     return acc;
   }, {});
 
-  console.log(locationCount);
-
   return (
     <div className="pt-5">
       <h3>
