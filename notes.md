@@ -111,6 +111,27 @@ This method ensures that each unique location is correctly counted, even if it's
 
 ## Classes used in this application
 
+### Within post.content
+
+The `className="text-truncate"` is a Bootstrap class used to truncate the text within an element so that it doesn't overflow its container. When applied, this class will cut off the text and add an ellipsis ("...") to indicate that there is more text that is not being displayed. It's particularly useful in responsive designs or in situations where you have limited space to display content, such as in table cells, cards, or sidebars.
+
+Here's a breakdown of how it works:
+
+1. **Truncating Text**: The `text-truncate` class applies CSS styling to limit the text to a single line and prevent it from wrapping. If the text is too long to fit in the element's width, it gets truncated.
+
+2. **Adding Ellipsis**: The class uses the CSS property `text-overflow: ellipsis;` to add an ellipsis to the end of the truncated text. This visually indicates to the user that there is more text that's not visible.
+
+3. **Overflow Control**: The class also ensures that the text content doesn't overflow the container by using `overflow: hidden;` and `white-space: nowrap;` CSS properties. `overflow: hidden;` hides any content that exceeds the element's boundary, and `white-space: nowrap;` prevents the text from wrapping to the next line, ensuring the text stays in a single line.
+
+Example usage in HTML:
+
+```html
+<div className="text-truncate" style={{ width: '150px' }}>
+  This is some long text that will be truncated with an ellipsis when it overflows.
+</div>
+```
+
+In this example, if the text exceeds the width of 150 pixels, it will be truncated, and an ellipsis will appear at the point of truncation. This is helpful for maintaining a clean and consistent layout even with variable text content lengths.
 ### Nav.jsx
 
 1. **`<nav className="navbar">`**:
@@ -140,3 +161,36 @@ This method ensures that each unique location is correctly counted, even if it's
    - `nav-link`: A Bootstrap class used for links within `nav-item`, styling them appropriately for the navbar context.
 
 These classes combine to create a responsive and styled navigation bar, with utility classes for spacing and alignment. Bootstrap's navbar component is designed to be flexible and easily customizable for different navigation layouts.
+
+### Footer.jsx
+
+Certainly! Here's an updated list including the Bootstrap class names used in your footer HTML snippet:
+
+1. **`<footer className="bg-warning text-center text-lg-end text-white">`**:
+   - `bg-warning`: A Bootstrap class for applying a warning or yellow background color.
+   - `text-center`: Centers text horizontally within the element.
+   - `text-lg-end`: Aligns text to the right on large (lg) screens and above.
+   - `text-white`: Applies white text color.
+
+2. **`<div className="container">`**:
+   - `container`: A Bootstrap class that centers your content horizontally and provides a responsive fixed-width container.
+
+3. **`<div className="row">`**:
+   - `row`: A Bootstrap class used as a flex container for columns, ensuring proper alignment and distribution of space among them.
+
+4. **`<div className="col-lg-8 col-md-12 d-flex justify-content-end">`**:
+   - `col-lg-8`: Specifies that the element should span 8 columns on large-sized devices (and larger).
+   - `col-md-12`: Specifies that the element should span 12 columns (full width) on medium-sized devices.
+   - `d-flex`: Applies the flexbox layout to the element.
+   - `justify-content-end`: Aligns the flex items to the end of the container (right side in left-to-right languages).
+
+5. **`<div className="d-inline-block text-end">`**:
+   - `d-inline-block`: Displays the element as an inline-block, allowing it to sit next to other inline elements.
+   - `text-end`: Aligns the text to the right of the container (end).
+
+6. **`<div className="col-lg-4 col-md-12 mb-1">`**:
+   - `col-lg-4`: Specifies that the element should span 4 columns on large-sized devices (and larger).
+   - `col-md-12`: Specifies that the element should span 12 columns (full width) on medium-sized devices.
+   - `mb-1`: Adds a margin to the bottom of the element with a size of 1.
+
+These classes are used to style the footer section, providing a responsive layout with Bootstrap's grid system, background and text color theming, and text alignment utilities.
