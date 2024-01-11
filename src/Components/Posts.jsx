@@ -5,11 +5,11 @@ import React from 'react'
 const Posts = () => {
   return (
   <div> 
-    {postData.map((post) => (
+    {postData.map((post) =>  
         <div className="col" key={post.id}>
           <Post post={post}/>
         </div>
-      ))}
+      )}
 </div>
       )}
 
