@@ -52,19 +52,6 @@ function App() {
       <Nav />
       <Header />
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} resetSearch={resetSearch} />
-      {/* <div>
-        <label htmlFor="search">
-          Search posts by location...
-        </label>
-        <input
-          value={searchTerm}
-          onChange={handleSearchChange}
-          type="text"
-          name="search"
-          id="search"
-        />
-        <button onClick={resetSearch}>Cancel</button>
-      </div> */}
   
       <div>
         {filteredPosts.map((post) => (
