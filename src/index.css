@@ -1,9 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
 .script-font {
   font-family: "Great Vibes", cursive;
 }
 
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: x-large;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+h1 {
+  font-family: 'Dancing Spirit', cursive;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: rgb(219, 171, 234);
+}
+
 .post-image-height {
   height: 250px;
+}
+
+.bg-body-tertiary {
+  background-color: yellow;
+}
+
+.text-center p-3 {
+  font-family: 'Dancing Spirit', cursive;
 }
