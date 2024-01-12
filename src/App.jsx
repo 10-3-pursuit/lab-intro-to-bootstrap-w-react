@@ -1,5 +1,7 @@
 import postData from "./data/posts.json";
 
+
+
 function App() {
   console.log(postData);
   return (
@@ -8,21 +10,21 @@ function App() {
     <main className="container">
       <div className="row" />
       <div> </div>
-          {/* Two cards with images */}
+          
           <div className="card mb-3">
-            <img src="./images/seattle.img" className="card-img-" alt="Card 1" />
+            <img src="/images/seattle.jpg" className="card-img-" alt="Card 1" />
             <div className="card-body">
               <h5 className="card-title">A sunny day in Seattle</h5>
               <p className="card-text">Seattle</p>
             </div>
           </div>
 
-
+        
    
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Travel Blog
-    <h5> </h5>
+    
     </a>
     
     
@@ -51,8 +53,14 @@ function App() {
       Travel is the only thing you buy that makes you richer...
       </h3>
     </header>
+    <br></br>
 
-    
+    <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Search post by location</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="input-text"/>
+    </div>
+  </div>
 
     <br></br>
       <button className="btn"> Posts by location</button>
@@ -117,6 +125,11 @@ function App() {
   </li>
 
 </ol>
+
+<footer className="bg-warning text-center text-lg-end text-black">
+  <h6>Contact Me</h6>
+  <h6>About the author</h6>
+</footer>
      
    </main>
   );

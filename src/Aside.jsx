@@ -21,3 +21,5 @@
     <span class="badge bg-primary rounded-pill">14</span>
   </li>
 </ol>
+
+export default Aside.jsx
