@@ -129,6 +129,7 @@ function App() {
 <footer className="bg-warning text-center text-lg-end text-black">
   <h6>Contact Me</h6>
   <h6>About the author</h6>
+  <p>copyright My Travel Blog 2020</p>
 </footer>
      
    </main>
