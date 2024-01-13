@@ -6,7 +6,7 @@ import postData from "./data/posts.json";
 
 
 function App() {
-  console.log(postData);
+  //console.log(postData);
   return (
 
 
