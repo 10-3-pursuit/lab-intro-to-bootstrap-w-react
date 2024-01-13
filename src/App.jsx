@@ -1,3 +1,6 @@
+
+
+import React from "react";
 import postData from "./data/posts.json";
 
 
@@ -16,8 +19,20 @@ function App() {
             <div className="card-body">
               <h5 className="card-title">A sunny day in Seattle</h5>
               <p className="card-text">Seattle</p>
+              <p className="card-text">Amet proident exercitaton minim sint. Culpa pariatur Lor...</p>
             </div>
           </div>
+
+          <div className="card mb-3">
+            <img src="/images/seattle.jpg" className="card-img-" alt="Card 2" />
+            <div className="card-body">
+              <h5 className="card-title">Memory Lane</h5>
+              <p className="card-text">Shibuya</p>
+              <p className="card-text">Quis excepteur mollit veniam enim aliquipea incididunt v...</p>
+            </div>
+          </div>
+
+          
 
         
    
