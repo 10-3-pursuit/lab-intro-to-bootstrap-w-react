@@ -1,15 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-.script-font {
-  font-family: "Great Vibes", cursive;
-}
 
-.post-image-height {
-  height: 250px;
-}
-
-/* 
-// X-Small devices (portrait phones, less than 576px)
+/* // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
@@ -25,4 +16,8 @@
 @media (min-width: 1200px) { ... }
 
 // XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) { ... } */
+@media (min-width: 1400px) { ... }
+
+export default App.css; */
+
+export default App.css;
