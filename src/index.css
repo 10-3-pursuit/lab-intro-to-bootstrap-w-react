@@ -1,21 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-.script-font {
-  font-family: "Great Vibes", cursive;
-}
-
-.post-image-height {
-  height: 250px;
-}
-  
-
-footer ul {
-  list-style-type: none;
-}
-footer li span {
-  font-weight: bold;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -29,20 +13,12 @@ body {
   min-height: 100vh;
 }
 
-
-footer {
-  background-color: gold;
-  width: 100%;
-  padding: 20px; 
+.script-font {
+  font-family: "Great Vibes", cursive;
 }
 
-
-footer ul {
-  list-style-type: none;
-}
-
-footer li span {
-  font-weight: bold;
+.post-image-height {
+  height: 250px;
 }
 
 .container-fluid {
@@ -63,16 +39,27 @@ footer li span {
   margin-right: 137px ;
   margin-top: 290px ;
 }
-.position-absolute span{
+.position-absolute span {
   color: gold;
 }
 
 .search-bar  {
-  
   margin-bottom: 10px;
 }
 .search-bar h3 {
   font-size: 14px;
   margin-left: 20px;
+}
 
+footer {
+  background-color: gold;
+  width: 100%;
+  padding: 20px; 
+}
+
+footer ul {
+  list-style-type: none;
+}
+footer li span {
+  font-weight: bold;
 }
